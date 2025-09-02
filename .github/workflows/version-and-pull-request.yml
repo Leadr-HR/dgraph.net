@@ -2,7 +2,11 @@ name: Build and Publish nuget package (Manual Versioning)
 
 on:
   workflow_dispatch:
-
+    
+permissions:
+  contents: read
+  packages: write # Required for publishing
+  
 jobs:
   core-package:
     runs-on: ubuntu-latest
