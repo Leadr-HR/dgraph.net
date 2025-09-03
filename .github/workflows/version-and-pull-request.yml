@@ -30,7 +30,7 @@ jobs:
           dotnet-version: 8.0.x
 
       - name: Set up NuGet packages source
-        run: dotnet nuget add source --username ${{ github.actor }} --password ${{ secrets.RUNNER_TOKEN_PRIVATE_NPM_READ }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/Leadr-HR/index.json"
+        run: dotnet nuget add source --username ${{ github.actor }} --password ${{ secrets.RUNNER_TOKEN_PRIVATE_NPM_READ }} --store-password-in-clear-text --name leadr-github "https://nuget.pkg.github.com/Leadr-HR/index.json"
 
       - name: Restore dependencies Core
         run: dotnet restore ${{ env.CORE_PROJECT }}
