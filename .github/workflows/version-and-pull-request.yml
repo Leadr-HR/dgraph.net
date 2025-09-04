@@ -43,7 +43,7 @@ jobs:
 
       - name: Build Core
         run: |
-          dotnet build ${{ env.CORE_PROJECT }}
+          dotnet build ${{ env.CORE_PROJECT }} --configuration Release
           dotnet pack ${{ env.CORE_PROJECT }} --configuration Release
 
       - name: Publish Core
